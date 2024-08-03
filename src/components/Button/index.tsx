@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { FaArrowRight } from 'react-icons/fa'; 
 import clsx from 'clsx';
 import Text from '../Text';

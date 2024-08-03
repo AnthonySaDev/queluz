@@ -49,7 +49,7 @@ const App: React.FC = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 1500,
-    beforeChange: (current: number, next: number) => setSelectedIndex(next),
+    beforeChange: ( next: number) => setSelectedIndex(next),
     appendDots: (dots: React.ReactNode) => (
       <div>
         <ul>{dots}</ul>

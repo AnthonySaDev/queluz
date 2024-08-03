@@ -55,7 +55,7 @@ const TestimonialCarousel: React.FC = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 1500,
-    beforeChange: (current: number, next: number) => setSelectedIndex(next),
+    beforeChange: ( next: number) => setSelectedIndex(next),
   };
 
   const handleButtonClick = () => {
