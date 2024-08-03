@@ -20,7 +20,7 @@ const HeroSectionMobile: React.FC<{ handleClick: () => void }> = ({
     }}
   >
     <img src={icon} alt="icon" className="w-[80px] h-[80px] mb-8 mt-[180px] xs:mt-10" />
-    <Text type="title" className="mb-28 xs:mb-14">
+    <Text type="title" className="mb-20 xs:mb-14">
       Invista em uma Loja de confiança!
     </Text>
     <Text type="paragraph" className="mb-4">

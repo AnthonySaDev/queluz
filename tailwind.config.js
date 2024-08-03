@@ -17,7 +17,7 @@ module.exports = {
         extrabold: 800,
       },
       screens: {
-        xs: { max: '390px' },
+        xs: { max: '380px' },
       },
     },
   },

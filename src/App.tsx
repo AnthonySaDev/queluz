@@ -410,31 +410,31 @@ e agilidade na instalação"
               Números que comprovam a nossa excelência:
             </Text>
             <div className="block lg:hidden">
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-white">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
               +<span className="text-[#F16422]">8</span>
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
               anos de experiência no setor
             </Text>
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-white">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
               +<span className="text-[#F16422]">2000</span>
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
               clientes atendidos e satisfeitos
             </Text>
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-white">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
               +<span className="text-[#F16422]">42</span>
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
               colaboradores em operação 
             </Text>
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-[#F16422]">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-[#F16422]">
               3 Unidades
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
               Ipatinga, Almenara, Governador Valadares
             </Text>
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-[#F16422]">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-[#F16422]">
               3 Estados
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
@@ -446,7 +446,7 @@ e agilidade na instalação"
             <div className="hidden lg:flex flex-col">
             <div className="w-full flex items-center justify-around">
             <div>
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-white">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
               +<span className="text-[#F16422]">6</span>
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
@@ -454,7 +454,7 @@ e agilidade na instalação"
             </Text>
             </div>
             <div>
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-white">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
               +<span className="text-[#F16422]">150 MIL</span>
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
@@ -462,7 +462,7 @@ e agilidade na instalação"
             </Text>
             </div>
             <div>
-            <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-white">
+            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
               +<span className="text-[#F16422]">10 mil</span>
             </Text>
             <Text type="paragraph" className="text-white text-[18px] mt-10">
@@ -471,7 +471,7 @@ e agilidade na instalação"
             </div>
             </div>
             <div>
-              <Text type="subtitle" className="mt-20 text-[92px] leading-[92px] text-[#F16422]">Nossa Unidade</Text>
+              <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-[#F16422]">Nossa Unidade</Text>
               <img src={mapa} alt="unidade" className="mx-auto mt-10"/>
             </div>
             </div>
