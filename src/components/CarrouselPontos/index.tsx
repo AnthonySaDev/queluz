@@ -33,7 +33,7 @@ const CarrouselPontosItem: React.FC<CarrouselItemProps> = ({
         alt="carousel"
         className="h-[300px] lg:h-[400px] w-full lg:w-1/2 object-cover rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none"
       />
-      <div className="relative z-10 bg-[#F5F5F5] p-8 lg:w-1/2 flex flex-col justify-center h-[400px] rounded-b-3xl lg:rounded-r-3xl lg:rounded-l-none">
+      <div className="relative z-10 bg-[#F5F5F5] p-8 lg:w-1/2 flex flex-col justify-center rounded-b-3xl lg:rounded-r-3xl lg:rounded-l-none">
         <Text
           type="subtitle"
           className="text-[#606060] text-left text-[32px] leading-[42px]"
@@ -58,9 +58,9 @@ const CarrouselPontosItem: React.FC<CarrouselItemProps> = ({
           )}
           {power && (
             <div className="flex items-center mt-4">
-              <img src={rayIcon} alt="power icon" className="w-6 h-6 mr-2" />
+              <img src={rayIcon} alt="power icon" className="w-6 h-6 mr-1" />
               <Text type="paragraph" className="text-center text-[#606060]">
-                Potência do sistema:{" "}
+                Potência do sistema:
                 <span className="text-[#F16422] font-titillium font-semibold">
                   {power}
                 </span>
