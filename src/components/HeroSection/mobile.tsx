@@ -19,7 +19,7 @@ const HeroSectionMobile: React.FC<{ handleClick: () => void }> = ({
       backgroundBlendMode: "overlay",
     }}
   >
-    <img src={icon} alt="icon" className="w-[80px] h-[80px] mb-8 mt-[180px] xs:mt-10" />
+    <img src={icon} alt="icon" className="w-[80px] h-[80px] mb-8 mt-[180px] xs:mt-[130px]" />
     <Text type="title" className="mb-20 xs:mb-14">
       Invista em uma Loja de confiança!
     </Text>

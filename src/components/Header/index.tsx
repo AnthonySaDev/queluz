@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="flex items-center justify-center lg:justify-around bg-white p-4">
-      <img src={logo} alt="logo" className="max-w-full h-auto" />
+      <img src={logo} alt="logo" className="max-w-full h-auto object-cover" />
       <Button
         text="FALE COM A NOSSA EQUIPE!"
         onClick={handleClick} 

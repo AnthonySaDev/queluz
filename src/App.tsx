@@ -402,7 +402,7 @@ e agilidade na instalação"
             <Text type="subtitle" className="text-[32px] text-white ">
               Com um
               <span className="text-[#F16422]"> amplo </span>{" "} estoque e soluções
-              <span className="text-[#F16422]">personalizadas,</span> estamos prontos para atender diversos públicos, de 
+              <span className="text-[#F16422]"> personalizadas,</span> estamos prontos para atender diversos públicos, de 
               <span className="text-[#F16422]"> residências</span> a
                <span className="text-[#F16422]"> grandes indústrias</span>.
             </Text>
