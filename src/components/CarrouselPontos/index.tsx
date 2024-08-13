@@ -30,7 +30,7 @@ const CarrouselPontosItem: React.FC<CarrouselItemProps> = ({
     <div className="flex flex-col lg:flex-row w-full rounded-3xl overflow-hidden">
       <img
         src={image}
-        alt="carousel"
+        alt="point"
         className="h-[300px] lg:h-[400px] w-full lg:w-1/2 object-cover rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none"
       />
       <div className="relative z-10 bg-[#F5F5F5] lg:p-8 px-3 py-8 lg:w-1/2 lg:h-[400px] flex flex-col justify-center rounded-b-3xl lg:rounded-r-3xl lg:rounded-l-none">
@@ -97,7 +97,6 @@ const CarrouselPontosItem: React.FC<CarrouselItemProps> = ({
               </Text>
             </div>
           )}
-
           {payback && (
             <div className="flex items-center mt-4">
               <img src={payIcon} alt="payback icon" className="w-6 h-6 mr-2" />

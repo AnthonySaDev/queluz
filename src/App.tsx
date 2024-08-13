@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Slider from "react-slick";
 
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -40,33 +39,6 @@ const App: React.FC = () => {
 
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    beforeChange: ( next: number) => setSelectedIndex(next),
-    appendDots: (dots: React.ReactNode) => (
-      <div>
-        <ul>{dots}</ul>
-      </div>
-    ),
-    customPaging: () => (
-      <div
-        style={{
-          width: "18px",
-          height: "8px",
-          borderRadius: "11px",
-          backgroundColor: "#A8A8A8",
-          margin: "0 5px",
-        }}
-      ></div>
-    ),
-  };
 
   return (
     <div className="font-titillium">
@@ -119,22 +91,13 @@ const App: React.FC = () => {
 
     {/* Carousel and Button */}
     <div className="mt-8 relative w-full lg:w-[720px] lg:mt-16">
-      <Slider {...settings}>
         {carouselItems.map((item, index) => (
           <div key={index}>
             <CarrouselPontosItem {...item} />
           </div>
         ))}
-      </Slider>
       <div className="flex justify-center mt-8">
-        {carouselItems.map((_, index) => (
-          <div
-            key={index}
-            className={`w-[18px] h-[8px] rounded-[11px] mx-1 ${
-              selectedIndex === index ? "bg-[#13212F]" : "bg-[#A8A8A8]"
-            }`}
-          />
-        ))}
+
       </div>
       <Button
         text="FALE COM A NOSSA EQUIPE!"
