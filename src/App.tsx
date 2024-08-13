@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useMediaQuery } from "react-responsive";
 
 import "slick-carousel/slick/slick-theme.css";
@@ -28,8 +28,6 @@ import Text from "./components/Text";
 import { carouselItems } from "./utils/utils";
 
 const App: React.FC = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
   const handleClick = () => {
     window.open(
       "https://api.whatsapp.com/send/?phone=553841410381&text&type=phone_number&app_absent=0",
