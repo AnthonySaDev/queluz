@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import { FaArrowRight } from 'react-icons/fa'; 
 import clsx from 'clsx';
+import { FC } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import Text from '../Text';
 
 type ButtonProps = {
@@ -11,7 +11,7 @@ type ButtonProps = {
 
 const Button: FC<ButtonProps> = ({ text, onClick, className, ...props }) => {
   const combinedClassName = clsx(
-    'flex items-center justify-between bg-[#F16422] text-white rounded-[8px] px-8 py-2',
+    'flex items-center justify-between bg-[#F16422] text-white rounded-[8px] lg:px-8 px-2 py-2',
     className
   );
 

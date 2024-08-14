@@ -24,7 +24,7 @@ const HeroSectionPC: React.FC<{ handleClick: () => void }> = ({ handleClick }) =
       <Button
         text="FALE COM A NOSSA EQUIPE!"
         onClick={handleClick}
-        className="mt-8 px-4 py-2 text-base md:text-lg lg:text-xl"
+        className="mt-8 px-4 py-2 text-[12px] lg:text-xl"
       />
       <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2">
         <a href="#section" className="scroll-smooth">
