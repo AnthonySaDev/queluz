@@ -19,7 +19,6 @@ import CarrouselPontosItem from "./components/CarrouselPontos";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import HeroSectionMobile from "./components/HeroSection/mobile";
 import HeroSectionPC from "./components/HeroSection/web";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import Text from "./components/Text";
@@ -40,11 +39,7 @@ const App: React.FC = () => {
     <div className="font-titillium">
       <div className="h-screen flex flex-col">
         <Header />
-        {isDesktop ? (
           <HeroSectionPC handleClick={handleClick} />
-        ) : (
-          <HeroSectionMobile handleClick={handleClick} />
-        )}
       </div>
 
       <div className="relative bg-white w-full flex flex-col lg:flex-row items-center lg:items-start justify-center px-[24px] lg:px-[240px] pb-24 lg:gap-[140px]">
