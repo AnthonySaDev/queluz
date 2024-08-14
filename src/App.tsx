@@ -7,8 +7,6 @@ import bgBeneficios from "./assets/images/bgBeneficios.png";
 import bgOrcamento from "./assets/images/bgOrcamento.png";
 import form from "./assets/images/form.png";
 import mapa from "./assets/images/mapa.png";
-import states from "./assets/images/states.png";
-import tower from "./assets/images/tower.png";
 import infinityIcon from "./assets/svg/infinity.svg";
 import mecanic from "./assets/svg/mecanic.svg";
 import numberOne from "./assets/svg/numberOne.svg";
@@ -50,8 +48,8 @@ const App: React.FC = () => {
       </div>
 
       <div className="relative bg-white w-full flex flex-col lg:flex-row items-center lg:items-start justify-center px-[24px] lg:px-[240px] pb-24 lg:gap-[140px]">
-    {/* Div for Desktop */}
-    <div className="hidden lg:block lg:w-[720px]">
+
+    <div className="lg:w-[720px]">
       <Text
         type="paragraph"
         className="text-[#606060] text-start text-[42px] leading-[42px] mt-20 font-tomorrow"
@@ -73,19 +71,6 @@ const App: React.FC = () => {
       />
     </div>
 
-    {/* Div for Mobile */}
-    <div className="block lg:hidden">
-      <Text
-        type="subtitle"
-        className="text-[#606060] text-center text-[42px] leading-[42px] mt-20"
-      >
-        QueLuz, sua loja de confiança em produtos elétricos e hidráulicos.
-      </Text>
-      <Text type="paragraph" className="mt-4 text-[#606060] text-center">
-        Venha conhecer nossas opções e transforme de vez a forma como você
-        utiliza energia e recursos!
-      </Text>
-    </div>
 
     {/* Carousel and Button */}
     <div className="mt-8 relative w-full lg:w-[720px] lg:mt-16">
@@ -116,61 +101,48 @@ const App: React.FC = () => {
           <div className="w-full px-7">
             <CarouselParceiros />
           </div>
-          <div className="w-full px-7 flex lg:hidden">
+      
+          <div className="w-full lg:px-7 flex flex-col lg:flex-row">
             <div
-              className="relative w-full h-[550px] mt-32 rounded-3xl bg-cover bg-center flex items-center text-center justify-end pb-28 flex-col"
-              style={{ backgroundImage: `url(${tower})` }}
-            >
-              <Text type="subtitle" className="text-[#606060] p-4 text-3xl">
-                Mais de
-                <span className="text-[#F16422]">
-                  40% da conta de energia
-                </span>{" "}
-                da sua empresa{" "}
-                <span className="text-[#F16422]">são impostos!</span>
-              </Text>
-              <Text type="paragraph" className="text-[#606060] p-4 text-xl">
-                Invista hoje e colha muita economia pelas próximas décadas!
-              </Text>
-            </div>
-          </div>
-          <div className="w-full px-7 hidden lg:flex">
-            <div
-              className="relative w-[80%] mx-auto rounded-3xl h-[650px] mt-32 "
-              style={{ 
-                backgroundImage: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7)), url(${bgBeneficios})`,
+            className="relative w-full lg:w-[90%] mx-auto rounded-3xl h-auto lg:h-[650px] mt-16 lg:mt-32"
+    style={{ 
+                backgroundImage: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url(${bgBeneficios})`,
                 backgroundSize: "cover",
-                backgroundPosition: "top",
+                backgroundPosition: isDesktop ? "top" : "left",
                 backgroundRepeat: "no-repeat",
                }}
             >
               <div className="w-full h-full flex flex-col">
-                <div className="w-full h-[80%] flex">
-                  <div className=" w-1/2 h-full flex flex-col items-start pl-28 justify-end">
-                  <Text type="title" className="text-white text-left p-4 text-[48px] leading-[48px]">Por Que Escolher a <p className="text-[#F16422] font-bold">Queluz?</p></Text>
-                  <Text type="title" className="text-white text-left p-4 text-[18px]">oferecemos produtos de alta qualidade e soluções inovadoras <p></p>
+              <div className="w-full h-auto lg:h-[90%] flex flex-col lg:flex-row">
+                <div className="w-full lg:w-[60%] h-full flex flex-col items-start px-4 lg:px-28 justify-end lg:mt-0 mt-12">
+                  <Text type="title" className="text-white text-left p-4 lg:text-[48px] text-[40px] lg:leading-[48px]">Por Que Escolher a <p className="text-[#F16422] font-bold">Queluz?</p></Text>
+                  <Text type="title" className="text-white text-left p-4 lg:text-[22px] text-[16px]">Oferecemos produtos de alta qualidade e soluções inovadoras
                   para residências, empresas e grandes projetos.</Text>
-                  <Button text="TAMBÉM QUERO ESSAS VANTAGENS!" onClick={handleClick} className="mt-8" />
+                  <Button
+                  text="TAMBÉM QUERO ESSAS VANTAGENS!"
+                  onClick={handleClick}
+                  className="mt-8 mx-auto lg:mx-0 text-[14px] lg:text-[16px] xl:text-[18px] px-4 lg:px-6 xl:px-8 py-2 lg:py-3 xl:py-4"
+                />
                   </div>
-                  <div className="w-1/2 h-full flex items-center justify-center">
-                  <div className="relative w-[70%] bg-[#F5F5F5] rounded-3xl flex flex-col items-start justify-around gap-8 p-10 ">
-              <div className="flex items-start gap-3">
+                  <div className="w-full lg:w-1/2 h-full flex items-center justify-center mt-8 lg:mt-0">
+                  <div className="relative w-[80%] lg:w-[70%] bg-[#F5F5F5] lg:mt-5 rounded-3xl flex flex-col items-start justify-around gap-8 p-6 lg:p-10">
+                  <div className="flex items-start gap-3">
                 <img
                   src={infinityIcon}
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
+                <Text type="paragraph" className="text-[#606060] lg:text-[18px] text-[16px]">
                 Qualidade e Variedade de Produtos
                 </Text>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 my-2">
                 <img
                   src={infinityIcon}
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
+                <Text type="paragraph" className="text-[#606060] lg:text-[18px] text-[16px]">
                 Atendimento Personalizado
                 </Text>
               </div>
@@ -180,7 +152,7 @@ const App: React.FC = () => {
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
+                <Text type="paragraph" className="text-[#606060] lg:text-[18px] text-[16px]">
                 Parcerias de Sucesso
                 </Text>
               </div>
@@ -190,7 +162,7 @@ const App: React.FC = () => {
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
+                <Text type="paragraph" className="text-[#606060] lg:text-[18px] text-[16px]">
                 Presença Digital
                 </Text>
               </div>
@@ -200,7 +172,7 @@ const App: React.FC = () => {
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
+                <Text type="paragraph" className="text-[#606060] lg:text-[18px] text-[16px]">
                 Custo-Benefício
                 </Text>
               </div>
@@ -210,21 +182,21 @@ const App: React.FC = () => {
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
+                <Text type="paragraph" className="text-[#606060] lg:text-[18px] text-[16px]">
                 Variedade de Estoque
                 </Text>
               </div>
               </div>
               </div>
               </div>    
-               <div className="flex items-end pb-4 justify-evenly w-full h-[20%]">
+               <div className="flex flex-col lg:flex-row lg:items-end pb-4 justify-evenly lg:w-full w-[70%] mx-auto lg:my-0 my-5 h-[20%]">
                <div className="flex items-start gap-3">
                 <img
                   src={infinityIcon}
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-white text-[18px]">
+                <Text type="paragraph" className="text-white lg:text-[18px] text-[16px]">
                 Torneiras - Caixa acoplada 
                                 </Text>
               </div>
@@ -234,7 +206,7 @@ const App: React.FC = () => {
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-white text-[18px]">
+                <Text type="paragraph" className="text-white lg:text-[18px] text-[16px]">
                 Manutenção  - Chuveiros                 </Text>
               </div>
                <div className="flex items-start gap-3">
@@ -243,83 +215,16 @@ const App: React.FC = () => {
                   alt="Infinity Icon"
                   className="w-8 h-8 mr-2"
                 />
-                <Text type="paragraph" className="text-white text-[18px]">
-                reparos de registros  e valvulas de descarga.                </Text>
+                <Text type="paragraph" className="text-white lg:text-[18px] text-[16px]">
+                Reparos de registros  e valvulas de descarga.</Text>
               </div>
                </div>
               </div>
             </div>
           </div>
-          <div className="px-7">
-            <div className="relative lg:hidden w-full bg-[#F5F5F5] rounded-3xl flex flex-col items-start justify-around gap-8 p-10 z-10 -mt-24">
-              <div className="flex items-start gap-3">
-                <img
-                  src={infinityIcon}
-                  alt="Infinity Icon"
-                  className="w-8 h-8 mr-2"
-                />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
-                  Melhor visibilidade do negócio frente a novos investimentos
-                  (ESG)
-                </Text>
-              </div>
-              <div className="flex items-start gap-3">
-                <img
-                  src={infinityIcon}
-                  alt="Infinity Icon"
-                  className="w-8 h-8 mr-2"
-                />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
-                  Redução dos custos da sua empresa
-                </Text>
-              </div>
-              <div className="flex items-start gap-3">
-                <img
-                  src={infinityIcon}
-                  alt="Infinity Icon"
-                  className="w-8 h-8 mr-2"
-                />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
-                  Aumento da lucratividade no seu negócio
-                </Text>
-              </div>
-              <div className="flex items-start gap-3">
-                <img
-                  src={infinityIcon}
-                  alt="Infinity Icon"
-                  className="w-8 h-8 mr-2"
-                />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
-                  Blindagem contra a variação do custo de energia
-                </Text>
-              </div>
-              <div className="flex items-start gap-3">
-                <img
-                  src={infinityIcon}
-                  alt="Infinity Icon"
-                  className="w-8 h-8 mr-2"
-                />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
-                  Garantia de retorno sobre o investimento
-                </Text>
-              </div>
-              <div className="flex items-start gap-3">
-                <img
-                  src={infinityIcon}
-                  alt="Infinity Icon"
-                  className="w-8 h-8 mr-2"
-                />
-                <Text type="paragraph" className="text-[#606060] text-[18px]">
-                  Isenção do ICMS, PIS/CONFINS sobre a energia gerada
-                </Text>
-              </div>
-            </div>
-          </div>
-          <div className="flex lg:hidden items-center justify-center my-7">
-            <Button text="QUERO ESSAS VANTAGENS" onClick={() => {}} />
-          </div>
 
-          <div className="mt-16 mb-20 px-5 lg:px-[650px] text-center">
+
+          <div className="mt-16 mb-20 px-5 text-center">
             <Text className="text-[#606060] text-[32px]" type="subtitle">
               Escolher a{" "}
               <span className="text-[#F16422]">Queluz é ter certeza</span> da
@@ -329,7 +234,7 @@ const App: React.FC = () => {
               entrega do esperado.
             </Text>
           </div>
-          <div className="flex flex-col lg:flex-row gap-6 px-7 lg:px-[240px]">
+          <div className="flex flex-col lg:flex-row gap-6 px-7 items-center">
             <Card
               description="Disponibilizamos uma vasta gama de produtos elétricos e hidráulicos, incluindo chuveiros, dispositivos inteligentes (Alexa, plugs e lâmpadas inteligentes), tubos elétricos, fios, caixas d'água e diversos tipos de canos."
               title="Equipamentos
@@ -370,42 +275,8 @@ e agilidade na instalação"
             <Text type="paragraph" className="text-white text-[18px] mt-7">
               Números que comprovam a nossa excelência:
             </Text>
-            <div className="block lg:hidden">
-            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
-              +<span className="text-[#F16422]">8</span>
-            </Text>
-            <Text type="paragraph" className="text-white text-[18px] mt-10">
-              anos de experiência no setor
-            </Text>
-            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
-              +<span className="text-[#F16422]">2000</span>
-            </Text>
-            <Text type="paragraph" className="text-white text-[18px] mt-10">
-              clientes atendidos e satisfeitos
-            </Text>
-            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
-              +<span className="text-[#F16422]">42</span>
-            </Text>
-            <Text type="paragraph" className="text-white text-[18px] mt-10">
-              colaboradores em operação 
-            </Text>
-            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-[#F16422]">
-              3 Unidades
-            </Text>
-            <Text type="paragraph" className="text-white text-[18px] mt-10">
-              Ipatinga, Almenara, Governador Valadares
-            </Text>
-            <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-[#F16422]">
-              3 Estados
-            </Text>
-            <Text type="paragraph" className="text-white text-[18px] mt-10">
-              Projetos espalhados em 3 estados: Minas Gerais, Bahia e Espírito
-              Santo;
-            </Text>
-            <img src={states} alt="states" className="mx-auto mt-5" />
-            </div>
-            <div className="hidden lg:flex flex-col">
-            <div className="w-full flex items-center justify-around">
+            <div className="flex flex-col">
+            <div className="w-full flex flex-col lg:flex-row items-center justify-around">
             <div>
             <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-white">
               +<span className="text-[#F16422]">6</span>
