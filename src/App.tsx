@@ -1,9 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 import bgBeneficios from "./assets/images/bgBeneficios.png";
+import bgBeneficiosMobile from "./assets/images/bgBeneficiosMobile.png";
 import bgOrcamento from "./assets/images/bgOrcamento.png";
 import form from "./assets/images/form.png";
 import mapa from "./assets/images/mapa.png";
@@ -101,7 +99,7 @@ const App: React.FC = () => {
             <div
             className="relative w-full lg:w-[90%] mx-auto rounded-3xl h-auto lg:h-[650px] mt-16 lg:mt-32"
     style={{ 
-                backgroundImage: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url(${bgBeneficios})`,
+                backgroundImage: `linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)), url(${isDesktop ? bgBeneficios : bgBeneficiosMobile})`,
                 backgroundSize: "cover",
                 backgroundPosition: isDesktop ? "top" : "left",
                 backgroundRepeat: "no-repeat",
