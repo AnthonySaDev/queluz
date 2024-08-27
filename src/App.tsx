@@ -3,7 +3,6 @@ import { useMediaQuery } from "react-responsive";
 import bgBeneficios from "./assets/images/bgBeneficios.png";
 import bgBeneficiosMobile from "./assets/images/bgBeneficiosMobile.png";
 import bgOrcamento from "./assets/images/bgOrcamento.png";
-import form from "./assets/images/form.png";
 import mapa from "./assets/images/mapa.png";
 import infinityIcon from "./assets/svg/infinity.svg";
 import mecanic from "./assets/svg/mecanic.svg";
@@ -21,7 +20,6 @@ import HeroSectionPC from "./components/HeroSection/web";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import Text from "./components/Text";
 import { carouselItems } from "./utils/utils";
-
 const App: React.FC = () => {
   const handleClick = () => {
     window.open(
@@ -40,9 +38,9 @@ const App: React.FC = () => {
           <HeroSectionPC handleClick={handleClick} />
       </div>
 
-      <div className="relative bg-white w-full flex flex-col lg:flex-row items-center lg:items-start justify-center px-[24px] lg:px-[240px] pb-24 lg:gap-[140px]">
+      <div className="relative bg-white w-full flex flex-col xl:flex-row items-center xl:items-start justify-center px-[24px] xl:px-[240px] pb-24 xl:gap-[140px]">
 
-    <div className="lg:w-[720px]">
+    <div className="xl:w-[720px]">
       <Text
         type="paragraph"
         className="text-[#606060] text-start text-[42px] leading-[42px] mt-20 font-tomorrow"
@@ -65,8 +63,7 @@ const App: React.FC = () => {
     </div>
 
 
-    {/* Carousel and Button */}
-    <div className="mt-8 relative w-full lg:w-[720px] lg:mt-16">
+    <div className="mt-8 relative w-full lg:w-[720px] lg:mt-16" id="section">
         {carouselItems.map((item, index) => (
           <div key={index}>
             <CarrouselPontosItem {...item} />
@@ -298,6 +295,14 @@ e agilidade na instalação"
             <div>
               <Text type="subtitle" className="mt-20 text-[80px] leading-[80px] text-[#F16422]">Nossa Unidade</Text>
               <img src={mapa} alt="unidade" className="mx-auto mt-10"/>
+              <a
+                href="https://maps.app.goo.gl/im6r4vtAqbed9skN8?g_st=com.google.maps.preview.copy"
+                className="block mt-5 text-[#F16422] bg-white w-fit mx-auto rounded-xl px-4 py-2 hover:text-white hover:bg-[#F16422] transition-colors text-xl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Localização
+              </a>
             </div>
             </div>
           </div>
@@ -311,11 +316,6 @@ e agilidade na instalação"
           <TestimonialCarousel />
         </div>
         <div className="mt-16 w-full">
-          <img
-            src={form}
-            alt="form"
-            className="mx-auto w-full px-3 object-cover block lg:hidden"
-          />
           <ContactForm />
         </div>
         <div className="relative w-full h-[780px] bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${bgOrcamento})` }}>

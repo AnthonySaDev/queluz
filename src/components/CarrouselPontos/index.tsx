@@ -27,20 +27,20 @@ const CarrouselPontosItem: React.FC<CarrouselItemProps> = ({
   economy,
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row w-full rounded-3xl overflow-hidden">
+    <div className="flex flex-col xl:flex-row w-full h-fit rounded-3xl overflow-hidden">
       <img
         src={image}
         alt="point"
-        className="h-[300px] lg:h-[400px] w-full lg:w-1/2 object-cover rounded-t-3xl lg:rounded-l-3xl lg:rounded-r-none"
+        className="h-[300px] xl:h-[430px] w-full xl:w-[40%] object-cover rounded-t-3xl xl:rounded-l-3xl xl:rounded-r-none"
       />
-      <div className="relative z-10 bg-[#F5F5F5] lg:p-8 px-3 py-8 lg:w-1/2 lg:h-[400px] flex flex-col justify-center rounded-b-3xl lg:rounded-r-3xl lg:rounded-l-none">
+      <div className="relative z-10 bg-[#F5F5F5] xl:p-8 px-3 py-10 xl:w-[600px] xl:h-[430px]  flex flex-col justify-center rounded-b-3xl xl:rounded-r-3xl xl:rounded-l-none">
         <Text
           type="subtitle"
           className="text-[#606060] text-left text-[32px] leading-[42px]"
         >
           {title}
         </Text>
-        <div className="flex flex-col items-start mt-8">
+        <div className="flex flex-col items-start mt-8 xl:mt-1">
           {location && (
             <div className="flex items-start mt-4">
               <img
@@ -50,7 +50,7 @@ const CarrouselPontosItem: React.FC<CarrouselItemProps> = ({
               />
               <Text
                 type="paragraph"
-                className="text-start text-[#606060] text-[18px]"
+                className="text-start text-[#606060]  xl:text-[18px]"
               >
                 {location}
               </Text>
