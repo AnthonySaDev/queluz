@@ -26,12 +26,10 @@ const ContactForm: React.FC = () => {
       (result) => {
         console.log(result.text);
         (event.target as HTMLFormElement).reset();
-        toast.success('Mensagem enviada com sucesso!');
         setButtonText("Enviado!");
       },
       (error) => {
         console.log(error.text);
-        toast.error('Erro ao enviar mensagem!');
       }
     ).finally(() => {
       setLoading(false);
