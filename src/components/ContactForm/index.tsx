@@ -1,7 +1,6 @@
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import InputMask from "react-input-mask";
-import { toast } from 'react-toastify';
 import formImage from "../../assets/images/formImage.png";
 import Text from "../Text";
 
