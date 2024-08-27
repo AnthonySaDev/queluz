@@ -18,7 +18,6 @@ const ContactForm: React.FC = () => {
       email: formData.get("email"),
       telefone: formData.get("phone"),
       estado: formData.get("state"),
-      message: formData.get("message"),
     };
 
     emailjs.send("service_yjq4mva", "template_5v7mtau", data, "ZD6IEKPTOqkp0ZM2m").then(
@@ -108,18 +107,7 @@ const ContactForm: React.FC = () => {
             <input
               type="text"
               name="state"
-              placeholder="Seu estado:"
-              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#F16422] placeholder:text-[17px] placeholder:text-[#181C28]"
-              required
-              onChange={handleInputChange}
-            />
-          </div>
-
-          <div className="mb-4">
-            <input
-              type="number"
-              name="message"
-              placeholder="Valor médio da conta de energia:"
+              placeholder="Sua cidade:"
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#F16422] placeholder:text-[17px] placeholder:text-[#181C28]"
               required
               onChange={handleInputChange}
